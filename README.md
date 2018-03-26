@@ -1,6 +1,6 @@
 # Homework-Angular-JS-Module
 
-Hey there! A lesson wihtout homework is like a Jedi witout his lithsaber, so this is the topic for the first home work:
+Hey there! A lesson wihtout homework is like a Jedi witout his light-saber, so this is the topic for the first home work:
 
 - Implement a Module named Garage that will manage your garage exposing only some public methods
 - You will have there a massive with all the car infos that will be private
