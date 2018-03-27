@@ -49,7 +49,7 @@ function Garage() {
       addNewCar: addNewCar,
       getAllCars : getAllCars,
       getCarAtIndex: getCarAtIndex,
-      removeCarAtindex: removeCarAtindex,
+      removeCarAtIndex: removeCarAtIndex,
       filterByColor: filterByColor,
       sortByYear: sortByYear,
       iterator:iterator
@@ -67,9 +67,7 @@ function Garage() {
   garage.addNewCar("vw", "grey", 2009, "universal", "gas")
   garage.addNewCar();
   
+  garage.sortByYear()
+  
   iterator = garage.iterator(garage.getAllCars())
   console.log(iterator.next())
-  
-  console.log(garage.getAllCars())
-  garage.sortByYear()
-  console.log(garage.getAllCars())
