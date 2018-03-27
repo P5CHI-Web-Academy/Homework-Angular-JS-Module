@@ -1,8 +1,8 @@
 function Garage() {
   
-    this._cars = [];
+    const cars = [];
     
-    this._Car = function(brand = "default", color = "default", year = 0, type = "default", fuel = "default") {
+    function Car(brand = "default", color = "default", year = 0, type = "default", fuel = "default") {
       this.brand = brand,
       this.color = color,
       this.year = year,
@@ -10,33 +10,32 @@ function Garage() {
       this.fuel = fuel
     }
     
-    this.getAllCars = function(){
-      return this._cars
+    function addNewCar(brand, color, year, type, fuel) {
+      cars.push(new Car(brand, color, year, type, fuel))
     }
     
-    this.getCarAtIndex = function(index){
-      return this._cars[index]
+    function getAllCars(){
+      return cars
     }
     
-    this.addNewCar = function(brand, color, year, type, fuel) {
-      this._cars.push(new this._Car(brand, color, year, type, fuel))
+    function getCarAtIndex(index){
+      return cars[index]
     }
     
-    this.removeCarAtindex = function(index) {
-      this._cars.splice(index, 1)
+    function removeCarAtIndex(index) {
+      cars.splice(index, 1)
     }
     
-    this.filterByColor = function(color) {
-      return this._cars.filter(car => car.color.toUpperCase() === 'GREY')
+    function filterByColor(color) {
+      return cars.filter(car => car.color.toUpperCase() === color.toUpperCase())
     }
     
-    this.sortByYear = function() {
-      this._cars.sort((current, next) => current.year - next.year)
+    function sortByYear() {
+      cars.sort((current, next) => current.year - next.year)
     }
     
-    this.iterator = function(cars) {
+    function iterator(cars) {
       var nextIndex = 0;
-      
       return {
          next: function() {
              return nextIndex < cars.length ?
@@ -44,13 +43,23 @@ function Garage() {
                  {done: true};
          }
       };
-  }
+    }
+    
+    return {
+      addNewCar: addNewCar,
+      getAllCars : getAllCars,
+      getCarAtIndex: getCarAtIndex,
+      removeCarAtindex: removeCarAtindex,
+      filterByColor: filterByColor,
+      sortByYear: sortByYear,
+      iterator:iterator
+    }
+    
   }
   
   function generateGarage() {
     return new Garage();
   }
-  
   
   const garage = generateGarage();
   
@@ -61,12 +70,6 @@ function Garage() {
   iterator = garage.iterator(garage.getAllCars())
   console.log(iterator.next())
   
-  /*
   console.log(garage.getAllCars())
   garage.sortByYear()
   console.log(garage.getAllCars())
-  */
-  
-  
-  
-  
