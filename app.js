@@ -50,7 +50,7 @@ function generateNewGarageModule() {
 
 var garage = Garage();
 
-garage.addNewCar('Audi', 2016, 6000);
+garage.addNewCar('Audi', 2016, 6500);
 garage.addNewCar('Dacia', 2007, 4500);
 
 garage.iterator();
