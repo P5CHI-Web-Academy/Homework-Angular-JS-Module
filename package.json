@@ -1,0 +1,23 @@
+{
+  "name": "homework-angular-js-module",
+  "version": "1.0.0",
+  "description": "Hey there! A lesson wihtout homework is like a Jedi witout his light-saber, so this is the topic for the first home work:",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synch404/Homework-Angular-JS-Module.git"
+  },
+  "author": "Mihai Topala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/synch404/Homework-Angular-JS-Module/issues"
+  },
+  "homepage": "https://github.com/synch404/Homework-Angular-JS-Module#readme",
+  "dependencies": {
+    "node-sass": "^4.8.3",
+    "nodemon": "^1.17.3"
+  }
+}
